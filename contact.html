@@ -6,6 +6,34 @@
   <meta name="description" content="Contact Niraj Wali">
   <title>Contact | Niraj Wali</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 600px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #aaa;
+      border-radius: 6px;
+    }
+
+    .contact-form button {
+      width: fit-content;
+      padding: 12px 22px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 
 <body>
@@ -26,7 +54,8 @@
   <section>
     <h2>Get in Touch</h2>
 
-    <form>
+    <form class="contact-form">
+
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
 
@@ -37,6 +66,7 @@
       <textarea id="message" name="message" rows="6"></textarea>
 
       <button type="submit">Send Message</button>
+
     </form>
   </section>
 
