@@ -1,72 +1,107 @@
+:root {
+  --bg: #f4f4f4;
+  --card: #ffffff;
+  --text: #222222;
+  --header: #222222;
+  --accent: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-font-family: Arial, sans-serif;
-margin: 0;
-line-height: 1.6;
-background: #f4f4f4;
-color: #222;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
 }
 
 header {
-background: #222;
-color: white;
-padding: 25px;
-text-align: center;
+  background: var(--header);
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 nav a {
-color: white;
-margin: 0 10px;
-text-decoration: none;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-nav a:hover,
-nav a:focus {
-text-decoration: underline;
+nav a:hover {
+  color: #60a5fa;
 }
 
 main {
-max-width: 900px;
-margin: auto;
-padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
 }
 
-section,
-article {
-background: white;
-padding: 25px;
-margin-bottom: 20px;
-border-radius: 8px;
+section {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  color: var(--accent);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
 footer {
-background: #222;
-color: white;
-text-align: center;
-padding: 20px;
+  background: var(--header);
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
 }
 
-label {
-display: block;
-margin-top: 10px;
-font-weight: bold;
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-input,
-textarea {
-width: 100%;
-padding: 10px;
-margin-top: 5px;
-box-sizing: border-box;
-}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
 
-button {
-margin-top: 15px;
-padding: 10px 20px;
-}
+  nav {
+    gap: 15px;
+  }
 
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-outline: 3px solid #005fcc;
+  main {
+    padding: 15px;
+  }
 }
