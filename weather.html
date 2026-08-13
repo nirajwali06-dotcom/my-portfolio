@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Real-time weather dashboard using JavaScript and REST APIs">
+
+    <title>Weather Dashboard | Niraj Wali</title>
+
+    <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Weather Dashboard</h1>
+    <p>Live Weather Information</p>
+</header>
+
+<main>
+
+    <section aria-labelledby="search-title">
+
+        <h2 id="search-title">Search Weather</h2>
+
+        <form id="weatherForm">
+
+            <label for="city">Enter city name</label>
+
+            <input
+                type="text"
+                id="city"
+                placeholder="Example: Bengaluru"
+                required
+            >
+
+            <button type="submit">Search</button>
+
+        </form>
+
+        <p id="message" role="status"></p>
+
+    </section>
+
+    <section id="weather" aria-labelledby="weather-title">
+
+        <h2 id="weather-title">Weather Details</h2>
+
+        <div class="weather-grid">
+
+            <article>
+                <h3>Temperature</h3>
+                <p id="temperature">-- °C</p>
+            </article>
+
+            <article>
+                <h3>Humidity</h3>
+                <p id="humidity">-- %</p>
+            </article>
+
+            <article>
+                <h3>Wind Speed</h3>
+                <p id="wind">-- km/h</p>
+            </article>
+
+        </div>
+
+        <p id="location">Search for a city to see weather.</p>
+
+    </section>
+
+</main>
+
+<script src="weather.js"></script>
+
+</body>
+</html>
