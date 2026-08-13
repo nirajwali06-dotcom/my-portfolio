@@ -1,80 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contact Niraj Wali">
-  <title>Contact | Niraj Wali</title>
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 600px;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      border: 1px solid #aaa;
-      border-radius: 6px;
-    }
-
-    .contact-form button {
-      width: fit-content;
-      padding: 12px 22px;
-      background: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Niraj Wali">
+    <title>Contact | Niraj Wali</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>Contact Me</h1>
+    <h1>Contact Me</h1>
 
-  <nav aria-label="Main navigation">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <button id="themeToggle" type="button"
+            aria-label="Switch to dark mode">
+        🌙 Dark Mode
+    </button>
 </header>
 
 <main>
 
-  <section>
-    <h2>Get in Touch</h2>
+    <section>
+        <h2>Get in Touch</h2>
 
-    <form class="contact-form">
+        <form>
 
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+            <label for="name">Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6"></textarea>
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Write your message"
+                required
+            ></textarea>
 
-      <button type="submit">Send Message</button>
+            <button type="submit">Send Message</button>
 
-    </form>
-  </section>
+        </form>
+    </section>
 
 </main>
 
 <footer>
-  <p>&copy; 2026 Niraj Wali</p>
+    <p>&copy; 2026 Niraj Wali</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
