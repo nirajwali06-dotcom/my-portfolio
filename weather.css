@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #222;
+}
+
+header {
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #0002;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+}
+
+button {
+    padding: 14px 22px;
+    border: 0;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.weather-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+article {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+article p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#message {
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    form {
+        flex-direction: column;
+    }
+
+    .weather-grid {
+        grid-template-columns: 1fr;
+    }
+}
