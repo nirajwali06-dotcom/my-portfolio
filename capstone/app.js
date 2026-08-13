@@ -6,37 +6,37 @@ const products = [
         id: 1,
         name: "Wireless Headphones",
         price: 49.99,
-        image: "https://via.placeholder.com/300"
+        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
     },
     {
         id: 2,
         name: "Smart Watch",
         price: 79.99,
-        image: "https://via.placeholder.com/300"
+        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500"
     },
     {
         id: 3,
         name: "Bluetooth Speaker",
         price: 39.99,
-        image: "https://via.placeholder.com/300"
+        image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500"
     },
     {
         id: 4,
         name: "Wireless Mouse",
         price: 24.99,
-        image: "https://via.placeholder.com/300"
+        image: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=500"
     },
     {
         id: 5,
         name: "Mechanical Keyboard",
         price: 59.99,
-        image: "https://via.placeholder.com/300"
+        image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500"
     },
     {
         id: 6,
         name: "USB-C Hub",
         price: 29.99,
-        image: "https://via.placeholder.com/300"
+        image: "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=500"
     }
 ];
 
@@ -70,9 +70,20 @@ function showProducts() {
         <div class="products">
             ${products.map(product => `
                 <article class="product">
-                    <img src="${product.image}" alt="${product.name}">
-                    <h2>${product.name}</h2>
+                    <a href="#/product/${product.id}">
+                        <img src="${product.image}"
+                             alt="${product.name}"
+                             loading="lazy">
+                    </a>
+
+                    <h2>
+                        <a href="#/product/${product.id}">
+                            ${product.name}
+                        </a>
+                    </h2>
+
                     <p>$${product.price.toFixed(2)}</p>
+
                     <button onclick="addToCart(${product.id})">
                         Add to Cart
                     </button>
@@ -97,6 +108,7 @@ function showProduct(id) {
                  width="300">
 
             <h1>${product.name}</h1>
+
             <h2>$${product.price.toFixed(2)}</h2>
 
             <p>
@@ -129,6 +141,7 @@ function showCart() {
                 <article class="product">
                     <h2>${product.name}</h2>
                     <p>$${product.price.toFixed(2)}</p>
+
                     <button onclick="removeFromCart(${product.id})">
                         Remove
                     </button>
